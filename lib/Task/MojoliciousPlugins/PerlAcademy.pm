@@ -5,7 +5,7 @@ package Task::MojoliciousPlugins::PerlAcademy;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 q~A great start to play with Perl~;
 
@@ -13,13 +13,15 @@ __END__
 
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Task::MojoliciousPlugins::PerlAcademy - All these modules are installed for the Mojolicious training
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 MODULES REQUIRED
 
@@ -37,6 +39,10 @@ Perl extension for simple login authentication for Mojolicious web applications
 
 Mojo way to upload files to CPAN
 
+=item * MojoX-CustomTemplateFileParser
+
+Parses a custom Mojo template file format
+
 =item * MojoX-DirectoryListing
 
 show Apache-style directory listings in your Mojolicious app
@@ -49,15 +55,27 @@ dispatch Qooxdoo applications with Mojo
 
 Gzip a Mojo::Message::Response
 
+=item * MojoX-GlobalEvents
+
+A module to handle events
+
 =item * MojoX-IOLoop-Server-StartTLS
 
 =item * MojoX-JSON-RPC
 
 Perl implementation of JSON-RPC 2.0 protocol for Mojolicious
 
+=item * MojoX-JSON-RPC-Service-AutoRegister
+
+Base class for RPC Services
+
 =item * MojoX-JSON-XS
 
 A JSON::XS backend replacement for Mojo::JSON
+
+=item * MojoX-JSONRPC2-HTTP
+
+Client for JSON RPC 2.0 over HTTP
 
 =item * MojoX-Log-Declare
 
@@ -83,6 +101,10 @@ A simple Mojo::Log implementation which logs to an SQLite database
 
 A Moose based Mojolicious controller
 
+=item * MojoX-Mysql
+
+Mojolicious ♥ Mysql
+
 =item * MojoX-Ping
 
 asynchronous ping with Mojolicious (DEPRECATED).
@@ -99,7 +121,7 @@ use PHP as a templating system in Mojolicious
 
 =item * MojoX-Redis
 
-asynchronous Redis client for L <Mojolicious> . (Obsoleted by
+asynchronous Redis client for Mojolicious. (Obsoleted by
 
 =item * MojoX-Renderer-Alloy
 
@@ -149,6 +171,10 @@ IO::Handle wrapper with some emulated socket-like behaviour for Mojo::IOLoop com
 
 Session management for Mojo
 
+=item * MojoX-Session-Simple
+
+Plack::Middleware::Session::Simple adapter for Mojolicious
+
 =item * MojoX-Session-Store-File
 
 File store for MojoX::Session
@@ -176,6 +202,10 @@ WebSocket version hixie-76 transaction container
 =item * MojoX-UserAgent
 
 An asynchronous user-agent for the Mojo Web Framework.
+
+=item * MojoX-UserAgent-Throttler
+
+add throttling support to Mojo::UserAgent
 
 =item * MojoX-ValidateHeadLinks
 
@@ -209,6 +239,10 @@ Generate a simple application with DBIx::Class authentication and Twitter Bootst
 
 dbicdump your Mojo app schema
 
+=item * Mojolicious-Command-generate-qx_mojo_app
+
+Mojo generator for a qooxdoo mojolicious app
+
 =item * Mojolicious-Command-generate-upstart
 
 upstart job generator command
@@ -233,6 +267,10 @@ Access control
 
 AccessLog Plugin
 
+=item * Mojolicious-Plugin-AdditionalValidationChecks
+
+Mojolicious Plugin
+
 =item * Mojolicious-Plugin-AdvancedMod
 
 Generic Mojolicious app, controllers, models, helpers, views
@@ -242,6 +280,10 @@ Generic Mojolicious app, controllers, models, helpers, views
 =item * Mojolicious-Plugin-Alias
 
 Mojolicious plugin to serve static files from aliased paths
+
+=item * Mojolicious-Plugin-Angular-MaterialDesign
+
+Mojolicious + https://material.angularjs.org/
 
 =item * Mojolicious-Plugin-AnyData
 
@@ -259,6 +301,10 @@ Gives you a simple %args hash of parameters on the request, even if they're post
 
 Compress and convert css, less, sass, javascript and coffeescript files
 
+=item * Mojolicious-Plugin-AttributeMaker
+
+Make attributes for Mojolicious? - easily!
+
 =item * Mojolicious-Plugin-Authentication
 
 A plugin to make authentication a bit easier
@@ -270,6 +316,10 @@ A plugin to make authorization a bit easier
 =item * Mojolicious-Plugin-AutoIndex
 
 Mojolicious plugin for autoindex function at static resource
+
+=item * Mojolicious-Plugin-AutoParams
+
+Send captured placeholder values as parameters for routes.
 
 =item * Mojolicious-Plugin-AutoRoute
 
@@ -293,7 +343,7 @@ Binds your Mojolicious session to IP-address for better security of your applica
 
 =item * Mojolicious-Plugin-BlogSpam
 
-Check your comments using BlogSpam
+Check your Comments using BlogSpam
 
 =item * Mojolicious-Plugin-Bootstrap3
 
@@ -303,6 +353,10 @@ Mojolicious + http://getbootstrap.com/
 
 Bootstrap alerts for your web app
 
+=item * Mojolicious-Plugin-BootstrapHelpers
+
+Type less bootstrap
+
 =item * Mojolicious-Plugin-BootstrapPagination
 
 Page Navigator plugin for Mojolicious
@@ -311,9 +365,17 @@ Page Navigator plugin for Mojolicious
 
 HTTP::BrowserDetect integration for Mojolicious
 
+=item * Mojolicious-Plugin-Browserify
+
+An Mojolicious plugin for assetpack+browserify
+
 =item * Mojolicious-Plugin-Bundle
 
 Collection of mojolicious plugins
+
+=item * Mojolicious-Plugin-CBOR
+
+render a CBOR response with Mojolicious
 
 =item * Mojolicious-Plugin-CGI
 
@@ -423,6 +485,10 @@ validate form input with Data::Validate::WithYAML
 
 "proper" handling of DBI based connections in Mojolicious
 
+=item * Mojolicious-Plugin-DateTime
+
+Mojolicious plugin to DateTime module integration
+
 =item * Mojolicious-Plugin-DeCSRF
 
 Defend from CSRF attacks
@@ -446,10 +512,6 @@ Interface with Disqus comments from your Mojolicious app
 =item * Mojolicious-Plugin-Disqus-Tiny
 
 Mojolicious plugin for integrating Disqus forum
-
-=item * Mojolicious-Plugin-Documentation
-
-A work in progress; intended to be a better documentation renderer then PODRenderer (don't use this for now).
 
 =item * Mojolicious-Plugin-DomIdHelper
 
@@ -475,13 +537,25 @@ Mojolicious plugin to find and parse RSS & Atom feeds
 
 Mojolicious plugin to fill in form.
 
+=item * Mojolicious-Plugin-FontAwesome4
+
+Mojolicious + http://fortawesome.github.io/Font-Awesome/
+
 =item * Mojolicious-Plugin-Form
 
 abstract forms for Mojolicious and DBIx::Class
 
 =item * Mojolicious-Plugin-FormFields
 
-Use objects and data structures in your forms
+Lightweight form builder with validation and filtering
+
+=item * Mojolicious-Plugin-FormFieldsFromJSON
+
+create form fields based on a definition in a JSON file
+
+=item * Mojolicious-Plugin-FormFieldsFromJSON-Date
+
+Mojolicious Plugin
 
 =item * Mojolicious-Plugin-FormValidator
 
@@ -506,6 +580,10 @@ grouped params from query.
 =item * Mojolicious-Plugin-HTMLLint
 
 HTML::Lint support for Mojolicious
+
+=item * Mojolicious-Plugin-HTMLTemplateProRenderer
+
+A Mojoliciuos plugin to render templates using HTML::Template::Pro module
 
 =item * Mojolicious-Plugin-HTMLTemplateRenderer
 
@@ -539,6 +617,10 @@ Mojolicious integration for humane.js
 
 Internationalization Plugin for Mojolicious
 
+=item * Mojolicious-Plugin-I18NUtils
+
+provide some helper functions for I18N
+
 =item * Mojolicious-Plugin-INIConfig
 
 Mojolicious Plugin to create routes automatically
@@ -551,6 +633,10 @@ Mojolicious plugin to interact with a remote ident service
 
 Easy installation configuration for Mojolicious apps
 
+=item * Mojolicious-Plugin-JQuery
+
+Mojolicious + http://jquery.com/
+
 =item * Mojolicious-Plugin-JSLoader
 
 move js loading to the end of the document
@@ -558,6 +644,10 @@ move js loading to the end of the document
 =item * Mojolicious-Plugin-JSONP
 
 Render JSONP with transparent fallback to JSON
+
+=item * Mojolicious-Plugin-JSONRPC2
+
+JSON RPC 2.0 over HTTP
 
 =item * Mojolicious-Plugin-JSUrlFor
 
@@ -598,6 +688,10 @@ Plugin for production-tier access logging
 =item * Mojolicious-Plugin-Log-Timestamp
 
 Plugin for customised log timestamps
+
+=item * Mojolicious-Plugin-Logf
+
+Plugin for logging datastructures using sprintf
 
 =item * Mojolicious-Plugin-Mail
 
@@ -643,6 +737,10 @@ Mojolicious plugin for modular development.
 
 Use MongoDB in Mojolicious
 
+=item * Mojolicious-Plugin-MoreUtilHelpers
+
+Methods to format, count, sanitize, etc...
+
 =item * Mojolicious-Plugin-MostTagHelpers
 
 More tag helpers for your templated and slides
@@ -675,9 +773,17 @@ Support foo.0.bar params
 
 Narada configuration plugin
 
+=item * Mojolicious-Plugin-NetsPayment
+
+Make payments using Nets
+
 =item * Mojolicious-Plugin-Nexmo
 
-Asynchronous (and synchronous) SMS and TTS (Text To Speech) sending
+Asynchronous (and synchronous) SMS and TTS (Text To Speech) sending with Nexmo provider.
+
+=item * Mojolicious-Plugin-Notifications
+
+Event Notifications for your Users
 
 =item * Mojolicious-Plugin-Nour-Config
 
@@ -686,6 +792,10 @@ Robustly imports config from a ./config sub-directory loaded with nested YAML fi
 =item * Mojolicious-Plugin-Nour-Database
 
 Adds an easy to use database handle to your mojo app.
+
+=item * Mojolicious-Plugin-Number-Commify
+
+Plugin for readable numbers
 
 =item * Mojolicious-Plugin-OAuth2
 
@@ -703,10 +813,6 @@ Uses wkhtmltopdf via PDF::WebKit to render your app exactly as it looks in Chrom
 
 Mojolicious Plugin for Rendering Perl Code Using PPI
 
-=item * Mojolicious-Plugin-ParamCondition
-
-Request parameter condition plugin
-
 =item * Mojolicious-Plugin-ParamExpand
 
 Use objects and data structures in your forms
@@ -718,6 +824,14 @@ Log request parameters
 =item * Mojolicious-Plugin-ParamsAuth
 
 URL Parameters Auth Helper
+
+=item * Mojolicious-Plugin-PayPal
+
+Make payments using PayPal
+
+=item * Mojolicious-Plugin-PetalTinyRenderer
+
+Petal::Tiny renderer plugin
 
 =item * Mojolicious-Plugin-PgAsync
 
@@ -758,6 +872,10 @@ jQuery QapTcha Plugin for Mojolicious
 =item * Mojolicious-Plugin-Qooxdoo
 
 Qooxdoo JSON-RPC support for the Mojolicious Perl framework
+
+=item * Mojolicious-Plugin-REST
+
+Mojolicious Plugin for RESTful operations
 
 =item * Mojolicious-Plugin-RESTRoutes
 
@@ -803,6 +921,10 @@ Simulate screen sizes
 
 Mojolicious helper for sending jobs to a Resque queue.
 
+=item * Mojolicious-Plugin-ReverseProxy
+
+ReverseProxy plugin for the Mojolicious Perl framework
+
 =item * Mojolicious-Plugin-SMS
 
 Easy SMS sending from Mojolicious apps
@@ -823,6 +945,18 @@ Sass Renderer Plugin for Mojolicious
 
 Mojolicious Plugin
 
+=item * Mojolicious-Plugin-SecureCORS
+
+Complete control over CORS
+
+=item * Mojolicious-Plugin-SemanticUI
+
+Semantic UI for your application
+
+=item * Mojolicious-Plugin-Sentry
+
+A perl sentry client for Mojolicious
+
 =item * Mojolicious-Plugin-ServerSession
 
 Perl extension to enable an additional server side session in mojolicious
@@ -830,6 +964,10 @@ Perl extension to enable an additional server side session in mojolicious
 =item * Mojolicious-Plugin-ServerStatus
 
 show server status like Apache's mod_status
+
+=item * Mojolicious-Plugin-SessionCompress
+
+Session serialization and compression plugin for Mojolicious
 
 =item * Mojolicious-Plugin-SessionStore
 
@@ -870,6 +1008,10 @@ create requests to your Mojolicious actions
 =item * Mojolicious-Plugin-Sugar
 
 Some sweet stuff for Mojolicious
+
+=item * Mojolicious-Plugin-Surveil
+
+Surveil user actions
 
 =item * Mojolicious-Plugin-TagHelpers-MailToChiffre
 
@@ -950,6 +1092,10 @@ Can validate using Moose objects
 =item * Mojolicious-Plugin-ValidateTiny
 
 Lightweight validator for Mojolicious
+
+=item * Mojolicious-Plugin-ViewBuilder
+
+a Mojolicious plugin that allows to chain templates generated by other plugins
 
 =item * Mojolicious-Plugin-Vparam
 
